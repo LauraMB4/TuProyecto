@@ -1,13 +1,12 @@
 package sumador;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
 
 class TestASumar {
 
     /**
-     * Test para una cifra de un dígito.
+     * Test para una cifra.
      */
     @Test
     public void testUnaCifra() {
@@ -26,4 +25,13 @@ class TestASumar {
         assertEquals("",resultado );
     }
 
+    /**
+     * Test varias cifras.
+     */
+    @Test
+    public void testVariasCifras() {
+        ASumar sumi = new ASumar();
+        String resultado = sumi.mostrar("3433");
+        assertEquals("3433 = 13",resultado);
+    }
 }
